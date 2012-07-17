@@ -1,0 +1,231 @@
+@import url(font/gw_cabin.css);  /* google web fonts */
+@import url(login_small.css);   /* layout for the small login form in the top right corner */
+@import url(markdown.css);
+
+/***************************************************************************/
+/** 1. RESET   
+/********************
+/ remove default styling of page elements (margins, padding, border, etc.)	
+****************************************************************************/
+html, body, ul, ol, li, form, fieldset, legend {margin: 0;	padding: 0; }
+h1,h2,h3,h4,h5,h6, p { margin-top: 0; }
+fieldset,img { border: 0; }
+legend { color: #000; }
+li { list-style: none; }
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+table {border-collapse: collapse; border-spacing: 0;}
+caption, th, td { text-align: left;	vertical-align: top; font-weight: normal; }
+
+/***************************************************************************/
+/** 2. Global Look
+/********************
+/ Some colors, look of basic elements.  	
+****************************************************************************/
+
+body { 
+	background: #006690;
+	color: black; 
+	line-height: 1.5; 
+	padding-top: 2em;
+	padding-right: 2em;}
+
+/* Links are black, become underlined only while mouse hovers. */
+a       { text-decoration: none; color: black; cursor: pointer; }
+a:hover { text-decoration: underline; }
+
+h1 { font-size: 270%; color: #A67C7C; padding-top: 20px; }
+h2 { font-size: 160%; line-height: 1;}
+h3 { font-size: 120%; }
+
+/***************************************************************************/
+/** 2. Global Layout DIVs
+/********************
+/*   <#wrapper>
+/*     <#header />
+/*     <#middle>
+/*       <#container>
+/*         <#content />
+/*       <# />
+/*     <#sidebar />
+/*     <# />
+/*   <#/>
+/* <#footer />
+
+****************************************************************************/
+#wrapper { margin: 10px auto; width: 1000px; }
+#wrapper a { text-decoration: none; color: #F48A00; }
+#wrapper span.highlight { color: #F48A00; }
+
+
+#header { font-family:  Courier New;border-bottom: 1px solid #ccc; margin-bottom: 20px; }
+#header .top { border-bottom: 1px solid #ccc; margin-bottom: 10px; }
+#header ul.navigation { list-style: none; text-align: right; }
+#header .navigation li { display: inline }
+#header .navigation li a { display: inline-block; padding: 10px 15px; border-left: 1px solid #ccc; }
+#header h2 { font-family: Courier New; font-size: 92px; text-align: center; line-height: 110px; }
+
+#header h3 { text-align: center; font-family:Courier New; font-size: 24px; margin-bottom: 20px; font-weight: normal; }
+
+#loginbox {
+	width: 240px;
+	height: 130px;
+	float: right;
+	padding: 0 ;
+	margin: 0, auto;
+}
+
+#middle {
+	width: 100%;
+	padding: 0 0 50px;
+	height: 1%;
+	position: relative;
+}
+
+#middle:after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
+#container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	minimum-height: 500px;
+}
+
+#content {
+	padding: 2em 0 0 16em; /* top bottom right left */
+	width: 800px;
+}
+
+#rightbar {
+	float: right;
+	width: 14em;
+	margin-left: -100%;
+	position: relative;
+	border-right: 2px dashed silver;
+	background-color:#b0c4de;
+}
+#leftbar{
+	font-family:Courier New;
+    float: left;
+	width: 14em;
+	margin-left: -100%;
+	position: relative;
+	border-left: 2px dashed silver;
+	background-color:#b0c4de;
+
+}
+
+#sidebaR ul { /* list items in the navigation bar (menu) */
+	padding-left: 5em;
+	padding-top: 2em;
+}
+
+
+#footer { border-top: 1px solid #ccc; clear: both; text-align: center; padding: 10px; color: #aaa; }
+
+
+
+
+
+
+
+
+.searchbox {
+	border: 0px;
+	position: absolute;
+	top: 140px;
+	right: 35px;
+	width: auto;
+	height: 35px;
+}
+/*end */
+.question, .answer, .comment {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-color: silver;
+	padding: 0.5em;
+	text-align: justify;
+}
+
+.question {
+	padding-left: 3em;
+	background: transparent url(../img/icons/question.png) no-repeat top left;
+	background-size: 40px;
+}
+
+.answer {
+	margin-left: 2em;
+	padding-left: 3em;
+	background: transparent url(../img/icons/answer.png) no-repeat top left;
+	background-size: 40px;
+}
+
+.comment {
+	padding-left: 8em;
+	font: italic 90%;
+}
+
+a.backlink {
+	margin-top: 1em;
+	display: block;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	background-image: url(../img/icons/back.png);
+	background-size: 50px;
+	background-position: center center;
+	height: 50px;
+	width: 50px;
+}
+
+a.backlink:hover {
+	background-image: url(../img/icons/back_hover.png);
+}
+
+.box {
+	border-width: 1px;
+	border-style: dashed;
+	border-color: red;
+	padding: 1em;
+	max-width: 40em;
+	margin: auto;
+}
+
+.vote {
+	
+ 	margin-top: 1em;
+	display: block;
+	white-space: nowrap;
+	height: 50px;
+	width: 50px;
+}
+
+.vote:hover {
+	
+}
+
+.message {
+	width: 98%;
+	margin-top:4px;
+	margin-left:0;
+	margin-right:0;
+	margin-bottom:0;
+	padding:4px;
+	text-align: center;
+	border: thin green solid;
+	color:green;
+}
+
+.message .red{
+	border: thin red solid;
+	color:red;
+}
+
+
+

@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+	{% block header %} Please Choose Game Level {% endblock %}        
+	   {% block body %}
+	 
+	<form action="{{ path('type') }}" method="post" {{ form_enctype(form) }}>
+  	  	{{ form_widget(form) }}
+   	 	<input type="submit" value="Go Ahead.." />
+	</form>
+           
+	{% endblock %}
+	
+	{% block sidebar %}
+		<ul>
+					
+			<li><a href="{{ D1 }}" >Play 1D</a></li>
+			<li><a href="{{ D2 }}" >Play 2D</a></li>
+			<li><a href="{{ D3 }}" >Play 3D</a></li>
+			
+		
+		</ul>
+	{% endblock %}
+
+
+
